@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>自娱自乐的精神乐园</title>
+  
+  <subtitle>余凯迪的博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-02-20T16:00:50.497Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>ykdsir</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode_124_contest</title>
+    <link href="http://yoursite.com/2019/02/20/undefined/leetcode/contest/leetcode-124-contest/"/>
+    <id>http://yoursite.com/2019/02/20/undefined/leetcode/contest/leetcode-124-contest/</id>
+    <published>2019-02-20T14:35:40.000Z</published>
+    <updated>2019-02-20T16:00:50.497Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;993-二叉树的堂兄弟节点&quot;&gt;&lt;a href=&quot;#993-二叉树的堂兄弟节点&quot; class=&quot;headerlink&quot; title=&quot;993. 二叉树的堂兄弟节点&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://yoursite.com/categories/leetcode/"/>
+    
+      <category term="contest" scheme="http://yoursite.com/categories/leetcode/contest/"/>
+    
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开博之作</title>
+    <link href="http://yoursite.com/2019/02/16/undefined/uncategorized/%E5%BC%80%E5%8D%9A%E4%B9%8B%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/02/16/undefined/uncategorized/开博之作/</id>
+    <published>2019-02-16T10:03:43.000Z</published>
+    <updated>2019-02-20T14:44:45.990Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天折腾了半天，总算是拼拼凑凑搭建好了一个精（jian）美（lou）的博客页面。&lt;/p&gt;
+&lt;p&gt;着手弄这个博客呢，有好几个原因：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;看别人的博客好看，就想着自己弄一个。不想太折腾，有必须体现程序员的逼格，gayhub是个好东西啊😏&lt;/li&gt;
+&lt;li
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
