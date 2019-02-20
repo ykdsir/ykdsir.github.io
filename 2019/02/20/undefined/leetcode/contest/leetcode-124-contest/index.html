@@ -106,7 +106,7 @@
 <meta property="og:locale" content="undefined">
 <meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/02/16/q1248-01.png">
 <meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/02/16/oranges.png">
-<meta property="og:updated_time" content="2019-02-20T16:00:50.497Z">
+<meta property="og:updated_time" content="2019-02-20T16:23:26.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode_124_contest">
 <meta name="twitter:description" content="993. 二叉树的堂兄弟节点描述在二叉树中，根节点位于深度 0 处，每个深度为 k 的节点的子节点位于深度 k+1 处。如果二叉树的两个节点深度相同，但父节点不同，则它们是一对堂兄弟节点。我们给出了具有唯一值的二叉树的根节点 root，以及树中两个不同节点的值 x 和 y。只有与值 x 和 y 对应的节点是堂兄弟节点时，才返回 true。否则，返回 false。  示例：12输入：root = [">
@@ -392,7 +392,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-21 00:00:50" itemprop="dateModified" datetime="2019-02-21T00:00:50+08:00">2019-02-21</time>
+                <time title="修改时间：2019-02-21 00:23:26" itemprop="dateModified" datetime="2019-02-21T00:23:26+08:00">2019-02-21</time>
               
             
           </span>
@@ -903,9 +903,14 @@
               })
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
             
           }
         })
