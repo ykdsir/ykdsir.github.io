@@ -165,6 +165,188 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/17/undefined/leetcode/contest/leetcode-189-contest/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ykdsir">
+      <meta itemprop="description" content="渣渣程序员，执着于算法却并不精通。没想过改变世界，只想着岁月静好。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自娱自乐的精神乐园">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/17/undefined/leetcode/contest/leetcode-189-contest/" class="post-title-link" itemprop="url">leetcode_189_contest</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-17 23:37:08" itemprop="dateCreated datePublished" datetime="2020-05-17T23:37:08+08:00">2020-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-18 00:25:47" itemprop="dateModified" datetime="2020-05-18T00:25:47+08:00">2020-05-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/contest/" itemprop="url" rel="index"><span itemprop="name">contest</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/05/17/undefined/leetcode/contest/leetcode-189-contest/" class="post-meta-item leancloud_visitors" data-flag-title="leetcode_189_contest" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>通过这次周赛，对Python的喜爱又深了一层。</p>
+<h1 id="5412-在既定时间做作业的学生人数"><a href="#5412-在既定时间做作业的学生人数" class="headerlink" title="5412. 在既定时间做作业的学生人数"></a><a href="https://leetcode-cn.com/problems/number-of-students-doing-homework-at-a-given-time/" target="_blank" rel="noopener">5412. 在既定时间做作业的学生人数</a></h1><p>思路：<br>因为数据量较小并且只查询一次，直接遍历比较即可。<br>多次查询的话，考虑线段树。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">busyStudent</span><span class="params">(self, startTime: List[int], endTime: List[int], queryTime: int)</span> -&gt; int:</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(startTime)):</span><br><span class="line">            <span class="keyword">if</span> startTime[i]&lt;=queryTime&lt;=endTime[i]:</span><br><span class="line">                res += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h1 id="5413-重新排列句子中的单词"><a href="#5413-重新排列句子中的单词" class="headerlink" title="5413. 重新排列句子中的单词"></a><a href="https://leetcode-cn.com/problems/rearrange-words-in-a-sentence/" target="_blank" rel="noopener">5413. 重新排列句子中的单词</a></h1><p>思路：<br>Python大法好！！！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">arrangeWords</span><span class="params">(self, text: str)</span> -&gt; str:</span></span><br><span class="line">        items = text.lower().split(<span class="string">' '</span>)</span><br><span class="line">        items = sorted(items, key = <span class="keyword">lambda</span> x:len(x))</span><br><span class="line">        <span class="keyword">return</span> <span class="string">' '</span>.join(items).capitalize()</span><br></pre></td></tr></table></figure>
+<h1 id="5414-收藏清单"><a href="#5414-收藏清单" class="headerlink" title="5414. 收藏清单"></a><a href="https://leetcode-cn.com/problems/people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list/" target="_blank" rel="noopener">5414. 收藏清单</a></h1><p>思路：<br>看数据量不大，直接双重循环即可。运用Python中set相减的操作可快速判断是否为子集。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">peopleIndexes</span><span class="params">(self, favoriteCompanies: List[List[str]])</span> -&gt; List[int]:</span></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(favoriteCompanies)):</span><br><span class="line">            flag = <span class="keyword">False</span></span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(len(favoriteCompanies)):</span><br><span class="line">                <span class="keyword">if</span> i==j:</span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line">                <span class="keyword">if</span> len(set(favoriteCompanies[i]) - set(favoriteCompanies[j])) == <span class="number">0</span>:</span><br><span class="line">                    flag=<span class="keyword">True</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> flag:</span><br><span class="line">                res.append(i)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h1 id="5415-圆形靶内的最大飞镖数量"><a href="#5415-圆形靶内的最大飞镖数量" class="headerlink" title="5415. 圆形靶内的最大飞镖数量"></a><a href="https://leetcode-cn.com/problems/maximum-number-of-darts-inside-of-a-circular-dartboard/" target="_blank" rel="noopener">5415. 圆形靶内的最大飞镖数量</a></h1><p>思路：<br>目前看到的做法都是两重循环，根据两个点确定最远的圆心位置，然后遍历判断个数。<br>通过向量运算确定最远圆心的位置，给出两点$A, B$，中点$m$向量$[(A.x+B.x)/2, (A.y+B.y)/2]$, 向量$\overrightarrow{AB}$为$[(A.x-B.x)/2, (A.y-B.y)/2]$，对应两点连线的单位法向量$\overrightarrow{MP}$为$[(A.y-B.y)/2/|AB|, -(A.x-B.x)/2/|AB|]$ 或 $[-(A.y-B.y)/2/|AB|, (A.x-B.x)/2/|AB|]$，$MP$对应的长度通过勾股定理$AP^2-MP^2$求出， 可得到对应的最远的圆心$P$。<br><img src="https://pic.leetcode-cn.com/ed9ee30fa5e513f1709912f81dd3b3f98f6ff616f3c4cc2d49fba68546009140.png" alt="图解"><br>具体的图解可参考：<a href="https://leetcode-cn.com/problems/maximum-number-of-darts-inside-of-a-circular-dartboard/solution/tu-jie-on3-bao-li-mei-ju-jie-fa-c-by-time-limit/" target="_blank" rel="noopener">图解圆心计算方法</a></p>
+<p>题解评论区看到的比较精简的代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numPoints</span><span class="params">(self, points: List[List[int]], r: int)</span> -&gt; int:</span></span><br><span class="line">        J = <span class="keyword">lambda</span> o: sum(dist(p, o) &lt;= r <span class="keyword">for</span> p <span class="keyword">in</span> points)</span><br><span class="line">        m = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> p1 <span class="keyword">in</span> points:</span><br><span class="line">            <span class="keyword">for</span> p2 <span class="keyword">in</span> points:</span><br><span class="line">                <span class="keyword">if</span> <span class="number">0</span> &lt; dist(p1, p2) &lt;= <span class="number">2</span> * r:</span><br><span class="line">                    s = [(p1[<span class="number">0</span>] + p2[<span class="number">0</span>]) / <span class="number">2</span>, (p1[<span class="number">1</span>] + p2[<span class="number">1</span>]) / <span class="number">2</span>]</span><br><span class="line">                    d = [(p1[<span class="number">0</span>] - p2[<span class="number">0</span>]) / <span class="number">2</span>, (p1[<span class="number">1</span>] - p2[<span class="number">1</span>]) / <span class="number">2</span>]</span><br><span class="line">                    z = sqrt(r ** <span class="number">2</span> - d[<span class="number">0</span>] ** <span class="number">2</span> - d[<span class="number">1</span>] ** <span class="number">2</span>) / hypot(*d)</span><br><span class="line">                    <span class="comment"># （d[1]*z, -d[0]*z）是向量垂直连线的向量</span></span><br><span class="line">                    <span class="comment"># p为圆心p1,p2两个点以r为圆心的两个圆的一个交点</span></span><br><span class="line">                    p = [s[<span class="number">0</span>] + d[<span class="number">1</span>] * z, s[<span class="number">1</span>] - d[<span class="number">0</span>] * z]</span><br><span class="line">                    m = max(m, J(p))</span><br><span class="line">                    p = [s[<span class="number">0</span>] - d[<span class="number">1</span>] * z, s[<span class="number">1</span>] + d[<span class="number">0</span>] * z]</span><br><span class="line">                    m = max(m, J(p))</span><br><span class="line">        <span class="keyword">return</span> m</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/17/undefined/leetcode/contest/leetcode-biweekly-contest-26/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ykdsir">
+      <meta itemprop="description" content="渣渣程序员，执着于算法却并不精通。没想过改变世界，只想着岁月静好。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自娱自乐的精神乐园">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/17/undefined/leetcode/contest/leetcode-biweekly-contest-26/" class="post-title-link" itemprop="url">leetcode_biweekly_contest_26</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-17 23:19:34 / 修改时间：23:35:32" itemprop="dateCreated datePublished" datetime="2020-05-17T23:19:34+08:00">2020-05-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/contest/" itemprop="url" rel="index"><span itemprop="name">contest</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/05/17/undefined/leetcode/contest/leetcode-biweekly-contest-26/" class="post-meta-item leancloud_visitors" data-flag-title="leetcode_biweekly_contest_26" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="5396-连续字符"><a href="#5396-连续字符" class="headerlink" title="5396. 连续字符"></a><a href="https://leetcode-cn.com/problems/consecutive-characters/" target="_blank" rel="noopener">5396. 连续字符</a></h1><p>思路：<br>用单独的变量记录前一个字符，判断当前字符和前一个字符是否相同，以此来进行计数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxPower</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        pre = s[<span class="number">0</span>]</span><br><span class="line">        count = <span class="number">1</span></span><br><span class="line">        res = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> s[<span class="number">1</span>:]:</span><br><span class="line">            <span class="keyword">if</span> x == pre:</span><br><span class="line">                count += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span> :</span><br><span class="line">                res = max(res, count)</span><br><span class="line">                pre = x</span><br><span class="line">                count = <span class="number">1</span></span><br><span class="line">        res = max(res,count)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h1 id="5397-最简分数"><a href="#5397-最简分数" class="headerlink" title="5397. 最简分数"></a><a href="https://leetcode-cn.com/problems/simplified-fractions/" target="_blank" rel="noopener">5397. 最简分数</a></h1><p>思路：<br>比较简单，依次遍历2到n，找到其对应的所有互质的数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gcd</span><span class="params">(self,a,b)</span>:</span></span><br><span class="line">        <span class="comment"># 欧几里得算法求最大公约数</span></span><br><span class="line">        <span class="keyword">return</span> a <span class="keyword">if</span> b==<span class="number">0</span> <span class="keyword">else</span> self.gcd(b,a%b)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">simplifiedFractions</span><span class="params">(self, n: int)</span> -&gt; List[str]:</span></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            res.append(<span class="string">"1/%d"</span>%x)</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>,x):</span><br><span class="line">                <span class="keyword">if</span> self.gcd(i,x) == <span class="number">1</span>:</span><br><span class="line">                    res.append(<span class="string">"%d/%d"</span> % (i,x))</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h1 id="5398-统计二叉树中好节点的数目"><a href="#5398-统计二叉树中好节点的数目" class="headerlink" title="5398. 统计二叉树中好节点的数目"></a><a href="https://leetcode-cn.com/problems/count-good-nodes-in-binary-tree/" target="_blank" rel="noopener">5398. 统计二叉树中好节点的数目</a></h1><p>思路：<br>深度优先搜索的时候，将路径上遇到的最大值依次往下传递即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 记录结果</span></span><br><span class="line">        self.res = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(self, root, max_num)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        max_num  = max(max_num, root.val)</span><br><span class="line">        <span class="keyword">if</span> root.val &gt;= max_num:</span><br><span class="line">            self.res += <span class="number">1</span></span><br><span class="line">        self.dfs(root.left, max_num)</span><br><span class="line">        self.dfs(root.right, max_num)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">goodNodes</span><span class="params">(self, root: TreeNode)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        self.dfs(root, root.val)</span><br><span class="line">        <span class="keyword">return</span> self.res</span><br></pre></td></tr></table></figure>
+<h1 id="5399-数位成本和为目标值的最大数字"><a href="#5399-数位成本和为目标值的最大数字" class="headerlink" title="5399. 数位成本和为目标值的最大数字"></a><a href="https://leetcode-cn.com/problems/form-largest-integer-with-digits-that-add-up-to-target/" target="_blank" rel="noopener">5399. 数位成本和为目标值的最大数字</a></h1><p>思路：<br>给定<code>cost</code>数组， 对<code>target</code>分解进行求解，很明显的搜索或者DP的思路。</p>
+<ol>
+<li>对于<code>cost</code>相同的数字，只需要记录最大的那个即可。</li>
+<li>对于给定的<code>cost</code>数组，任意<code>target</code>的方案的最大值是唯一的；深度优先搜索的时候，可以利用哈希记录不同<code>target</code>对应的值，及时终止递归。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(self, target)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> target <span class="keyword">in</span> self.mm:</span><br><span class="line">            <span class="keyword">return</span> self.mm[target]</span><br><span class="line">        <span class="keyword">if</span> target &lt; <span class="number">0</span>:</span><br><span class="line">            <span class="comment"># 返回0意味着target没有成功进行拆分</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        max_res =  <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> key, val <span class="keyword">in</span> self.cost_map.items():</span><br><span class="line">            <span class="keyword">if</span> target == key:</span><br><span class="line">                max_res = max(val, max_res)</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            tmp = val</span><br><span class="line">            tmp_res = self.dfs(target-key)</span><br><span class="line">            <span class="keyword">if</span> tmp_res != <span class="number">0</span>:</span><br><span class="line">                max_res = max(int(str(tmp)+str(tmp_res)), max_res)</span><br><span class="line">                max_res = max(int(str(tmp_res)+str(tmp)), max_res)</span><br><span class="line">        self.mm[target] = max_res</span><br><span class="line">        <span class="keyword">return</span> max_res</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">largestNumber</span><span class="params">(self, cost: List[int], target: int)</span> -&gt; str:</span></span><br><span class="line">        self.cost_map = &#123;&#125;</span><br><span class="line">        self.mm = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i,x <span class="keyword">in</span> enumerate(cost):</span><br><span class="line">            <span class="keyword">if</span> x <span class="keyword">in</span> self.cost_map:</span><br><span class="line">                self.cost_map[x] = max(i+<span class="number">1</span>, self.cost_map[x])</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                self.cost_map[x] = i+<span class="number">1</span></span><br><span class="line">        print(self.cost_map)</span><br><span class="line">        res = self.dfs(target)</span><br><span class="line">        <span class="keyword">return</span> str(res)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/10/undefined/leetcode/contest/leetcode-188-contest/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -866,7 +1048,7 @@ f(i,j)= max \begin{cases}
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
