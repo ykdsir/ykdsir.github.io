@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-17T16:25:47.313Z</updated>
+  <updated>2020-05-24T03:55:15.670Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode_190_contest</title>
+    <link href="http://yoursite.com/2020/05/24/undefined/leetcode/contest/leetcode-190-contest/"/>
+    <id>http://yoursite.com/2020/05/24/undefined/leetcode/contest/leetcode-190-contest/</id>
+    <published>2020-05-24T03:18:52.000Z</published>
+    <updated>2020-05-24T03:55:15.670Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;5416-检查单词是否为句中其他单词的前缀&quot;&gt;&lt;a href=&quot;#5416-检查单词是否为句中其他单词的前缀&quot; class=&quot;headerlink&quot; title=&quot;5416. 检查单词是否为句中其他单词的前缀&quot;&gt;&lt;/a&gt;&lt;a href=&quot;&quot;&gt;5416.
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://yoursite.com/categories/leetcode/"/>
+    
+      <category term="contest" scheme="http://yoursite.com/categories/leetcode/contest/"/>
+    
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode_189_contest</title>
     <link href="http://yoursite.com/2020/05/17/undefined/leetcode/contest/leetcode-189-contest/"/>
     <id>http://yoursite.com/2020/05/17/undefined/leetcode/contest/leetcode-189-contest/</id>
     <published>2020-05-17T15:37:08.000Z</published>
-    <updated>2020-05-17T16:25:47.313Z</updated>
+    <updated>2020-05-18T01:01:53.034Z</updated>
     
     <summary type="html">
     
