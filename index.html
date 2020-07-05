@@ -165,6 +165,97 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/05/undefined/leetcode/contest/leetcode-contest-196/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ykdsir">
+      <meta itemprop="description" content="渣渣程序员，执着于算法却并不精通。没想过改变世界，只想着岁月静好。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自娱自乐的精神乐园">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/05/undefined/leetcode/contest/leetcode-contest-196/" class="post-title-link" itemprop="url">leetcode_contest_196</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-05 17:00:19 / 修改时间：17:38:29" itemprop="dateCreated datePublished" datetime="2020-07-05T17:00:19+08:00">2020-07-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/contest/" itemprop="url" rel="index"><span itemprop="name">contest</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/07/05/undefined/leetcode/contest/leetcode-contest-196/" class="post-meta-item leancloud_visitors" data-flag-title="leetcode_contest_196" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="5452-判断能否形成等差数列"><a href="#5452-判断能否形成等差数列" class="headerlink" title="5452. 判断能否形成等差数列"></a><a href="https://leetcode-cn.com/problems/can-make-arithmetic-progression-from-sequence/" target="_blank" rel="noopener">5452. 判断能否形成等差数列</a></h1><p>思路：<br>排序后取前两个数的差，依次检查是否满足等差。<br>注意提示中给出的数组长度大于等于2，所以不需要考虑边界条件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">canMakeArithmeticProgression</span><span class="params">(self, arr: List[int])</span> -&gt; bool:</span></span><br><span class="line">        arr = sorted(arr)</span><br><span class="line">        num = arr[<span class="number">1</span>] - arr[<span class="number">0</span>]</span><br><span class="line">        pre = arr[<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> arr[<span class="number">2</span>:]:</span><br><span class="line">            <span class="keyword">if</span> x - pre != num:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">            pre = x</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<h1 id="5453-所有蚂蚁掉下来前的最后一刻"><a href="#5453-所有蚂蚁掉下来前的最后一刻" class="headerlink" title="5453. 所有蚂蚁掉下来前的最后一刻"></a><a href="https://leetcode-cn.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/" target="_blank" rel="noopener">5453. 所有蚂蚁掉下来前的最后一刻</a></h1><p>思路：<br>题目一开始看起来还是挺绕的，其实蚂蚁同时改变移动方向可以理解为都没有改变，或者理解为蚂蚁换了身份一直按照既定的方向行走。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getLastMoment</span><span class="params">(self, n: int, left: List[int], right: List[int])</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> len(left) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> n-min(right)</span><br><span class="line">        <span class="keyword">if</span> len(right) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> max(left)</span><br><span class="line">        <span class="keyword">return</span> max(n-min(right),max(left))</span><br></pre></td></tr></table></figure>
+<h1 id="5454-统计全-1-子矩形"><a href="#5454-统计全-1-子矩形" class="headerlink" title="5454. 统计全 1 子矩形"></a><a href="https://leetcode-cn.com/problems/count-submatrices-with-all-ones/" target="_blank" rel="noopener">5454. 统计全 1 子矩形</a></h1><p>思路：<br>依次遍历每一行，记录从该位置往上1的个数。例如：</p>
+<ul>
+<li>1 0 1</li>
+<li>1 1 0</li>
+<li>1 1 0</li>
+</ul>
+<p>每一行的就是 [[1,0,1],[2,1,0],[3,2,0]]<br>然后我们依次统计每一行为底的矩形的个数。然后按照长度从1到n依次进行统计。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cal</span><span class="params">(self, arr)</span>:</span></span><br><span class="line">        <span class="comment"># 计算每一行为底的不同高度的矩形个数</span></span><br><span class="line">        <span class="comment"># max_row为从左到右该点连续1的最大个数</span></span><br><span class="line">        max_row = [<span class="number">0</span>] * len(arr)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(arr)):</span><br><span class="line">            <span class="keyword">if</span> arr[i] == <span class="number">0</span>:</span><br><span class="line">                max_row[i] = <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                max_row[i] = max_row[i<span class="number">-1</span>] + <span class="number">1</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 一次遍历k*l矩形的个数，l为矩形为底的长度，从1到n</span></span><br><span class="line">        <span class="keyword">for</span> l <span class="keyword">in</span> range(<span class="number">1</span>,len(arr)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> i, m_r <span class="keyword">in</span> enumerate(max_row):</span><br><span class="line">                <span class="keyword">if</span> m_r &lt; l:</span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line">                min_height = min(arr[i-l+<span class="number">1</span>:i+<span class="number">1</span>])</span><br><span class="line">                ans += min_height</span><br><span class="line">        <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numSubmat</span><span class="params">(self, mat: List[List[int]])</span> -&gt; int:</span></span><br><span class="line">        m = len(mat)</span><br><span class="line">        n = len(mat[<span class="number">0</span>])</span><br><span class="line">        arr = [<span class="number">0</span>] * n</span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> mat:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">                <span class="keyword">if</span> line[i] == <span class="number">0</span>:</span><br><span class="line">                    arr[i] = <span class="number">0</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    arr[i] += <span class="number">1</span></span><br><span class="line">            res += self.cal(arr)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h1 id="5455-最多-K-次交换相邻数位后得到的最小整数"><a href="#5455-最多-K-次交换相邻数位后得到的最小整数" class="headerlink" title="5455. 最多 K 次交换相邻数位后得到的最小整数"></a><a href="https://leetcode-cn.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/" target="_blank" rel="noopener">5455. 最多 K 次交换相邻数位后得到的最小整数</a></h1><p>思路：<br>直接贪心可以过。从高位开始，遍历<code>k</code>范围内的最小值，取最近的一个交换即可。<br>可能是数据集太水了，正确解法还不太确定。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minInteger</span><span class="params">(self, num: str, k: int)</span> -&gt; str:</span></span><br><span class="line">        <span class="keyword">if</span> k &gt; len(num) **<span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">''</span>.join(sorted(num))</span><br><span class="line">        num = list(num)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(num)):</span><br><span class="line">            <span class="keyword">if</span> k &gt; <span class="number">0</span>:</span><br><span class="line">                max_l = min(k+<span class="number">1</span>,len(num)-i)</span><br><span class="line">                min_num = min(num[i:i+max_l])</span><br><span class="line">                <span class="keyword">if</span> num[i] == min_num:</span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line">                index = num[i:i+max_l].index(min_num) + i</span><br><span class="line">                tmp = num[i:index]</span><br><span class="line">                num[i] = min_num</span><br><span class="line">                num[i+<span class="number">1</span>:index+<span class="number">1</span>] = tmp</span><br><span class="line">                k -= index - i</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">''</span>.join(num)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/30/undefined/leetcode/contest/leetcode-contest-195/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -959,108 +1050,6 @@ dp[i][j][l] = j \times dp[i-1][j][l] + \sum_{t=1}^{j-1}dp[i-1][t][l-1]</script><
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/25/undefined/%E7%BC%96%E7%A8%8B/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ykdsir">
-      <meta itemprop="description" content="渣渣程序员，执着于算法却并不精通。没想过改变世界，只想着岁月静好。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="自娱自乐的精神乐园">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/25/undefined/%E7%BC%96%E7%A8%8B/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="post-title-link" itemprop="url">动态规划</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-25 13:24:06 / 修改时间：16:44:31" itemprop="dateCreated datePublished" datetime="2020-03-25T13:24:06+08:00">2020-03-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/03/25/undefined/%E7%BC%96%E7%A8%8B/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="post-meta-item leancloud_visitors" data-flag-title="动态规划" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>有限集中的最优化问题</p>
-<ol>
-<li>状态表示（化零为整）</li>
-</ol>
-<ul>
-<li>确定集合是什么</li>
-<li>属性和集合的关系（max，min，count）</li>
-</ul>
-<ol>
-<li>状态计算（化整为零）</li>
-</ol>
-<ul>
-<li>划分为不同的子集，计算子集然后根据子集计算该集合的属性（不重复不遗漏）</li>
-<li>划分依据：寻找最后一个不同点</li>
-</ul>
-<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><h2 id="1-01背包问题"><a href="#1-01背包问题" class="headerlink" title="1. 01背包问题"></a><a href="https://www.acwing.com/problem/content/2/" target="_blank" rel="noopener">1. 01背包问题</a></h2><p><strong>普通的状态转移方式，二维的状态表示</strong><br>状态 <code>dp[i][j]</code> 表示前<code>i</code>个物品体积不超过<code>j</code>的最大价值<br>状态转移：<code>dp[i][j] = max(dp[i-1][j], dp[i-v[i]]+w[i])</code></p>
-<h3 id="朴素解答"><a href="#朴素解答" class="headerlink" title="朴素解答"></a>朴素解答</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1010</span>;</span><br><span class="line"><span class="keyword">int</span> v[N],w[N];</span><br><span class="line"><span class="keyword">int</span> dp[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,V;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;V;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;++i)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;v[i]&gt;&gt;w[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=V;++j)&#123;</span><br><span class="line">            dp[i][j] = dp[i<span class="number">-1</span>][j];</span><br><span class="line">            <span class="keyword">if</span>(j&gt;=v[i])&#123;</span><br><span class="line">                dp[i][j] = max(dp[i][j], dp[i<span class="number">-1</span>][j-v[i]] + w[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dp[N][V];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="状态优化解答"><a href="#状态优化解答" class="headerlink" title="状态优化解答"></a>状态优化解答</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1010</span>;</span><br><span class="line"><span class="keyword">int</span> v[N],w[N];</span><br><span class="line"><span class="keyword">int</span> dp[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,V;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;V;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;++i)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;v[i]&gt;&gt;w[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;++i)&#123;</span><br><span class="line">        <span class="comment">// 主要此时对体积的遍历，从小到大会影响到dp[j-v[i]]，从大到小保证更新j的时候，j-v[i]是 i-1 的值而不是 i 的值</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=V;j&gt;=v[i];--j)&#123;</span><br><span class="line">            dp[j] = max(dp[j], dp[j-v[i]] + w[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dp[V];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-完全背包问题"><a href="#2-完全背包问题" class="headerlink" title="2. 完全背包问题"></a><a href="https://www.acwing.com/problem/content/3/" target="_blank" rel="noopener">2. 完全背包问题</a></h2><p>状态<code>dp[i][j]</code> 表示前<code>i</code>个物品体积不超过<code>j</code>的最大价值；<br>状态转移 <code>dp[i][j]=max(dp[i-1][j], dp[i-1][j-v]+w, dp[i-1][j-2v]+2w, dp[i-1][j-3v]+3w, ...)</code><br>朴素的状态转移需要3重循环；考虑<code>dp[i][j]</code>和<code>dp[i][j-v]</code>的关系：<br><code>dp[i][j-v]=max(dp[i-1][j-v], dp[i-1][j-2v]+w, dp[i-1][j-3v]+2w,...)</code><br>可以看出<code>dp[i][j]=max(dp[i-1][j], dp[i][j-v]+w)</code></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1010</span>;</span><br><span class="line"><span class="keyword">int</span> v[N],w[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> dp[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)<span class="built_in">cin</span>&gt;&gt;v[i]&gt;&gt;w[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=v[i];j&lt;=m;++j)&#123;</span><br><span class="line">            dp[j] = max(dp[j], dp[j-v[i]] + w[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;dp[m];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-石子合并"><a href="#3-石子合并" class="headerlink" title="3. 石子合并"></a><a href="https://www.acwing.com/problem/content/284/" target="_blank" rel="noopener">3. 石子合并</a></h2><p>区间dp问题<br>状态表示：<code>f(i,j)</code>表示所有将<code>[i,j]</code>合并为一堆的方案的集合；属性为最小值<br>状态计算：<br><code>f(i,j)=min(f(i,k)+f(k+1,j)+sum(i,j)) i≤k≤j-1</code></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">310</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> v[N],f[N][N];</span><br><span class="line"><span class="keyword">int</span> pre_sum[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;v[i];</span><br><span class="line">        <span class="comment">// 先记录前缀和后续使用</span></span><br><span class="line">        pre_sum[i] = pre_sum[i<span class="number">-1</span>]+v[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 先枚举区间，再枚举区间起点，再枚举区间分割点</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> len=<span class="number">2</span>;len&lt;=n;++len)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i+len<span class="number">-1</span>&lt;=n;++i)&#123;</span><br><span class="line">            <span class="keyword">int</span> j= i+len<span class="number">-1</span>;</span><br><span class="line">            f[i][j] = <span class="number">1e8</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=i;k&lt;=j<span class="number">-1</span>;++k)&#123;</span><br><span class="line">                f[i][j] = min(f[i][j], f[i][k]+f[k+<span class="number">1</span>][j]+pre_sum[j]-pre_sum[i<span class="number">-1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt; f[<span class="number">1</span>][n];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="最长公共子序列"><a href="#最长公共子序列" class="headerlink" title="最长公共子序列"></a><a href="https://www.acwing.com/problem/content/899/" target="_blank" rel="noopener">最长公共子序列</a></h2><p>状态表示：<code>f(i,j)</code><br>  集合：<code>A[1-i]</code>和<code>B[1-j]</code>所有公共子序列的集合<br>  状态：最大值<br>状态转移：</p>
-<script type="math/tex; mode=display">
-f(i,j)= max \begin{cases}
- f(i-1,j-1) + 1 & \text{ if a[i]=b[j] }\\
- f(i-1,j) & \\
- f(i,j-1)) & \\
-\end{cases}</script><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> a[N],b[N];</span><br><span class="line"><span class="keyword">int</span> f[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)<span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;++i)<span class="built_in">cin</span>&gt;&gt;b[i];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;++j)&#123;</span><br><span class="line">            f[i][j] = max( f[i][j<span class="number">-1</span>], f[i<span class="number">-1</span>][j]);</span><br><span class="line">            <span class="keyword">if</span>(a[i]==b[j])f[i][j] = max(f[i][j],f[i<span class="number">-1</span>][j<span class="number">-1</span>] + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;f[n][m]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1131,7 +1120,7 @@ f(i,j)= max \begin{cases}
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-30T07:15:03.554Z</updated>
+  <updated>2020-07-05T09:38:29.339Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode_contest_196</title>
+    <link href="http://yoursite.com/2020/07/05/undefined/leetcode/contest/leetcode-contest-196/"/>
+    <id>http://yoursite.com/2020/07/05/undefined/leetcode/contest/leetcode-contest-196/</id>
+    <published>2020-07-05T09:00:19.000Z</published>
+    <updated>2020-07-05T09:38:29.339Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;5452-判断能否形成等差数列&quot;&gt;&lt;a href=&quot;#5452-判断能否形成等差数列&quot; class=&quot;headerlink&quot; title=&quot;5452. 判断能否形成等差数列&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://yoursite.com/categories/leetcode/"/>
+    
+      <category term="contest" scheme="http://yoursite.com/categories/leetcode/contest/"/>
+    
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode_contest_195</title>
