@@ -1,0 +1,58 @@
+{
+  "updated": "2026-10-21",
+  "posts": [
+    {
+      "slug": "a-place-for-curiosity",
+      "title": "给好奇心留一个自己的地方",
+      "summary": "一个个人网站，可以同时容纳有用的工具、未完成的问题，以及暂时说不清用途的兴趣。",
+      "date": "2026-10-21",
+      "category": "思考",
+      "tag": "个人网站",
+      "source": "_content/posts/a-place-for-curiosity.html",
+      "provenance": "editorial",
+      "visibility": "public",
+      "privacy_reviewed": true
+    },
+    {
+      "slug": "one-day-one-question",
+      "title": "一天，只追一个问题",
+      "summary": "把学习的单位从一门课，换成一个能观察、尝试、解释的小问题。结束时，留下一张图或一页笔记。",
+      "date": "2026-10-21",
+      "category": "探索",
+      "tag": "学习方法",
+      "source": "_content/posts/one-day-one-question.html",
+      "provenance": "editorial",
+      "visibility": "public",
+      "privacy_reviewed": true
+    }
+  ],
+  "projects": [
+    {
+      "title": "一天探索实验室",
+      "description": "12 个小项目，从搜索实验到电影声音。按兴趣选一个问题，带着具体步骤开始。",
+      "status": "交互工具",
+      "tags": ["学习", "跨领域", "浏览器工具"],
+      "url": "/explore/",
+      "number": "01",
+      "style": "sage"
+    },
+    {
+      "title": "算法笔记档案",
+      "description": "2019—2020 年留下的 13 篇文章。保留题解、代码与原链接，也保留学习时的思路。",
+      "status": "历史归档",
+      "tags": ["算法", "动态规划", "LeetCode"],
+      "url": "/archives/",
+      "number": "02",
+      "style": "sand"
+    },
+    {
+      "title": "这座数字花园",
+      "description": "一处持续生长的个人网站。把项目、文章和兴趣放在一起，用轻量的静态页面慢慢积累。",
+      "status": "持续建设",
+      "tags": ["设计", "静态网站", "开源代码"],
+      "url": "https://github.com/ykdsir/ykdsir.github.io",
+      "number": "03",
+      "style": "clay"
+    }
+  ]
+}

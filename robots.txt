@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ykdsir.github.io/sitemap.xml
